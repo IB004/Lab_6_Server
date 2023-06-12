@@ -1,4 +1,4 @@
-package client;
+package inner_client;
 
 import data.LabWork;
 import exceptions.WrongInputException;
@@ -33,7 +33,6 @@ public class ScriptReader {
             return null;
         }
     }
-
     private String readWord(Scanner fileScanner){
         String line = nextScriptLine(fileScanner);
         if (line == null){

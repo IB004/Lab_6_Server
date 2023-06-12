@@ -2,7 +2,7 @@ package util;
 
 import abstractions.ICommand;
 import commands.*;
-import exceptions.ExceptionType;
+import exceptions.WrongCommandNameException;
 import exceptions.WrongInputException;
 
 import java.util.HashMap;
@@ -42,7 +42,7 @@ public class CommandManager {
     public static ICommand getCommand(String commandName) throws WrongInputException{
         ICommand command = commandMap.get(commandName);
         if (command == null) {
-            throw new WrongInputException(ExceptionType.WRONG_COMMAND, commandName);
+            throw new WrongCommandNameException(commandName);
         }
         return command;
     }

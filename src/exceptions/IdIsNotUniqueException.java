@@ -1,4 +1,4 @@
 package exceptions;
 
-public class IdIsNotUniqueException extends Exception{
+public class IdIsNotUniqueException extends Exception {
 }

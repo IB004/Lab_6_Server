@@ -1,8 +1,10 @@
 package abstractions;
 
-import client.*;
+import inner_client.*;
 import data.CommandData;
 import data.ResultData;
+
+import java.io.IOException;
 
 
 public interface IClientCommandExecutor extends ICommandExecutor{
@@ -21,4 +23,5 @@ public interface IClientCommandExecutor extends ICommandExecutor{
     ResultData help(CommandData commandData);
     ResultData exit(CommandData commandData);
     ResultData executeScript(CommandData commandData);
+    void showServerRespond() throws IOException, ClassNotFoundException, InterruptedException;
 }

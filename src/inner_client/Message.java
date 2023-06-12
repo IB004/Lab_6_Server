@@ -1,4 +1,4 @@
-package client;
+package inner_client;
 import abstractions.ICommand;
 import data.LabWork;
 
@@ -39,10 +39,6 @@ public class Message {
 
     public void connectionSuccess(){
         printText("Connected to server!");
-    }
-
-    public void waitingMessage(){
-        printText("Wait for connection ...");
     }
 
 

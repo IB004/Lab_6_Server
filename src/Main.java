@@ -1,23 +1,19 @@
 
+import labCollection.LabCollection;
+import server.InnerClientThread;
 import server.Server;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Server server = new Server();
-        server.startServerActions();
+        LabCollection labCollection = new LabCollection();
+        if(args.length > 0){
+            labCollection.setFilePath(args[0]);
+        }
+        Server server = new Server(labCollection);
+        //new InnerClientThread().start();
         server.doWhileTrue();
     }
 
 }
 
 
-/*
-    // in start method should fill the collection from the CSV file
-    public void askToReadFile(){
-        CommandData commandData = new CommandData();
-        commandData.command = new ReadCommand();
-        //ResultData resultData = sendCommandToExecutor(commandData);
-        //ResultHandler.showResult(resultData);
-        Message.printEmptyLine();
-    }
- */

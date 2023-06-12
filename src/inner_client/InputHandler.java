@@ -1,4 +1,4 @@
-package client;
+package inner_client;
 
 import data.LabWork;
 import exceptions.WrongInputException;
